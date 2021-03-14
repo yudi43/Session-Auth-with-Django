@@ -5,7 +5,7 @@ from django.contrib.auth.models import User
 
 # The reason that we are using two serializers for the models is that we'll be using the UserSerializerWithToken
 # for handling signups. When a user signs up, we want the response from the server to include both their relevant 
-# user data (in this case, just the username), as well as the token.
+# user data (in this case, just the username), as well as the token, which will be stored in the browser for further authentication.
 
 class UserSerializer(serializers.ModelSerializer):
 
